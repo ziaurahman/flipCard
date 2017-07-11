@@ -1,0 +1,25 @@
+.info-card {
+    float: left;
+   -webkit-perspective: 600px;
+}
+.front, .back {
+  transition: -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+.front {
+  position: absolute;
+  z-index: 1;
+}
+.back {
+  -webkit-transform: rotateY(-180deg);
+}
+.info-card:hover .back {
+  -webkit-transform: rotateY(0);
+}
+.info-card:hover .front {
+  -webkit-transform: rotateY(180deg);
+}
+
+
+  
